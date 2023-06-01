@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Editor from "./Components/editor";
 import Previewer from './Components/previewer';
 
@@ -29,7 +29,7 @@ function addNumbers(a, b) {
 
 **Bolded text**
 `;
-  const [markdown, setMarkdown] = useState(initialMarkdown);
+const [markdown, setMarkdown] = useState(initialMarkdown);  
 
   const handleInputChange = (event) => {
     setMarkdown(event.target.value);
