@@ -4,8 +4,8 @@ import { marked } from 'marked';
 function Previewer({markdown}) {
   
   return(
-    <div>
-      <div className="preview" dangerouslySetInnerHTML={{ __html: marked(markdown) }} />
+    <div >
+      <div id="preview" className="preview" dangerouslySetInnerHTML={{ __html: marked(markdown) }} />
     </div>
   )
 }
