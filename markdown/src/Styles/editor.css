@@ -1,0 +1,49 @@
+.editor {
+  background-color: #FFFF00;
+  width: 50%;
+  height: 300px;
+}
+
+.edit {
+  background-color: #FF69B4;
+}
+
+.window {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 1px 0 rgba(0, 0, 0, .2);
+  font-family: 'Kalam', cursive;
+  font-weight: 200;
+}
+
+.header-window {
+  font-family: 'Kalam', cursive;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 1px 0 rgba(0, 0, 0, .2);
+}
+
+textarea {
+  background-color: #FFFF00;
+  border: none;
+  height: 99%;
+  width: 98%;
+  margin-top: 5px;
+  margin-left: 5px; 
+  padding: 5px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.expanded {
+  width: 80%;
+  min-height: 500px;
+}
+
