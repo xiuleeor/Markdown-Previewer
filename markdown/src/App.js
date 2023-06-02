@@ -5,44 +5,44 @@ import "./App.css";
 
 function App() {
   var initialMarkdown = `
-# Header (H1 size)
-## Sub Header (H2 size)
+  # Header (H1 size)
+  ## Sub Header (H2 size)
 
-[Link](https://example.com)
+  [Link](https://example.com)
 
-Inline code: \`<code>\`
+  Inline code: \`<code>\`
 
-Code block:
+  Code block:
 
-\`\`\`
-function addNumbers(a, b) {
+  \`\`\`
+  function addNumbers(a, b) {
   return a + b;
-}
-\`\`\`
+  }
+  \`\`\`
 
-- List item 1
-- List item 2
-- List item 3
+  - List item 1
+  - List item 2
+  - List item 3
 
-> Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  > Blockquote: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-![Image](https://example.com/image.jpg)
+  ![Image](https://example.com/image.jpg)
 
-**Bolded text**
-`;
-const [markdown, setMarkdown] = useState(initialMarkdown);  
-const [isEditorExpanded, setIsEditorExpanded] = useState(false);
-const [isPreviewerExpanded, setIsPreviewerExpanded] = useState(false);
+  **Bolded text**
+  `;
+  const [markdown, setMarkdown] = useState(initialMarkdown);  
+  const [isEditorExpanded, setIsEditorExpanded] = useState(false);
+  const [isPreviewerExpanded, setIsPreviewerExpanded] = useState(false);
 
-const toggleEditorExpand = () => {
+  const toggleEditorExpand = () => {
   setIsEditorExpanded(!isEditorExpanded);
   setIsPreviewerExpanded(false);
-};
+  };
 
-const togglePreviewerExpand = () => {
+  const togglePreviewerExpand = () => {
   setIsPreviewerExpanded(!isPreviewerExpanded);
   setIsEditorExpanded(false);
-};
+  };
 
   const handleInputChange = (event) => {
     setMarkdown(event.target.value);
@@ -57,8 +57,8 @@ const togglePreviewerExpand = () => {
       {!isEditorExpanded && (
         <Previewer markdown={markdown} isExpanded={isPreviewerExpanded} toggleExpand={togglePreviewerExpand}/>
       )}
-      
-      
+
+
     </div>
   );
 }
