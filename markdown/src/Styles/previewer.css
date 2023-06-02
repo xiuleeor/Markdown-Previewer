@@ -1,0 +1,42 @@
+.previewer{
+  background-color: #FFA500;
+  margin-top: 1rem;
+  width: 70%;
+  min-height: 300px;
+  
+}
+
+.prev{
+  background-color: #00FF00;
+}
+
+.window{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 1px 0 rgba(0, 0, 0, .2);
+  font-family: 'Kalam', cursive;
+  font-weight: 200;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.header-window{
+  font-family: 'Kalam', cursive;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 1px 0 rgba(0, 0, 0, .2);
+}
+
+.preview{
+  padding-left: 10px;
+}
+
+.expanded{
+  width: 90%;
+  min-height: 500px;
+}
