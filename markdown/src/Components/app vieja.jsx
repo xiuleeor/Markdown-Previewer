@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import Editor from '../src/components/editor';
-import Previewer from './components/previewer';
-import "./App.css";
+//import React, { useState } from 'react';
+//import Editor from '../src/components/editor';
+//import Previewer from './components/previewer';
+//import "./App.css";
 
 function App() {
-  const [markdown, setMarkdown] = useState('');
+ // const [markdown, setMarkdown] = useState('');
 const [defaultMarkdown, setDefaultMarkdown] = useState(`# Heading 1
 ## Subheading 2
 [Link](https://example.com)
@@ -18,17 +18,17 @@ console.log(message);
 > Blockquote
 ![Image](https://example.com/image.jpg)
 **Bold Text**`);
-  const [isEditorExpanded, setIsEditorExpanded] = useState(false);
-  const [isPreviewerExpanded, setIsPreviewerExpanded] = useState(false);
+  //const [isEditorExpanded, setIsEditorExpanded] = useState(false);
+  //const [isPreviewerExpanded, setIsPreviewerExpanded] = useState(false);
 
   const handleEditorChange = (newMarkdown) => {
     setMarkdown(newMarkdown);
   };
 
-  const toggleEditorExpand = () => {
-    setIsEditorExpanded(!isEditorExpanded);
-    setIsPreviewerExpanded(false);
-  };
+  //const toggleEditorExpand = () => {
+  //  setIsEditorExpanded(!isEditorExpanded);
+  //  setIsPreviewerExpanded(false);
+  //};
 
   const togglePreviewerExpand = () => {
     setIsPreviewerExpanded(!isPreviewerExpanded);

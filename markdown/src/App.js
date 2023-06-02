@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Editor from "./Components/editor";
 import Previewer from './Components/previewer';
+import "./App.css";
 
 function App() {
   var initialMarkdown = `
@@ -30,16 +31,34 @@ function addNumbers(a, b) {
 **Bolded text**
 `;
 const [markdown, setMarkdown] = useState(initialMarkdown);  
+const [isEditorExpanded, setIsEditorExpanded] = useState(false);
+const [isPreviewerExpanded, setIsPreviewerExpanded] = useState(false);
+
+const toggleEditorExpand = () => {
+  setIsEditorExpanded(!isEditorExpanded);
+  setIsPreviewerExpanded(false);
+};
+
+const togglePreviewerExpand = () => {
+  setIsPreviewerExpanded(!isPreviewerExpanded);
+  setIsEditorExpanded(false);
+};
 
   const handleInputChange = (event) => {
     setMarkdown(event.target.value);
   };
 
   return (
-    <div className="App">
+    <div className="app">
       <h1>Markdown Previewer</h1>
-      <Editor handleInputChange={handleInputChange} markdown={markdown}/>
-      <Previewer markdown={markdown}/>
+      {!isPreviewerExpanded && (
+        <Editor handleInputChange={handleInputChange} markdown={markdown} isExpanded={isEditorExpanded} toggleExpand={toggleEditorExpand}/>
+      )}
+      {!isEditorExpanded && (
+        <Previewer markdown={markdown} isExpanded={isPreviewerExpanded} toggleExpand={togglePreviewerExpand}/>
+      )}
+      
+      
     </div>
   );
 }
